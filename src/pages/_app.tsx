@@ -9,7 +9,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <div className="minw-w-[300px] relative mx-6 lg:mx-40 xl:mx-48">
       <ClerkProvider>
         <Navbar />
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </ClerkProvider>
     </div>
   );
