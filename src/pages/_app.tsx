@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className="mx-6 lg:mx-40 xl:mx-48">
+    <div className="minw-w-[300px] relative mx-6 lg:mx-40 xl:mx-48">
       <ClerkProvider>
         <Navbar />
         <Component {...pageProps} />;
