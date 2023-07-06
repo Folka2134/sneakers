@@ -55,10 +55,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          {products?.data?.map((product) => (
-            <Card key={product.id} product={product} />
-          ))}
+        <div className="container grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 md:gap-6">
+          {products?.data?.map((product) => {
+            if (product.userId === "sneakers") {
+              return <Card key={product.id} product={product} />;
+            }
+          })}
         </div>
       </main>
     </>
